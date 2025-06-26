@@ -36,19 +36,7 @@
             overflow: hidden;
         }
 
-        header::before {
-            content: '';
-            background: url('logo.webp') no-repeat center;
-            background-size: 200px;
-            opacity: 0.1;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 100%;
-            height: 100%;
-            z-index: 0;
-        }
+
 
         header h1,
         header p {
@@ -158,6 +146,7 @@
                 opacity: 0;
                 transform: translateY(20px);
             }
+
             to {
                 opacity: 1;
                 transform: translateY(0);
@@ -232,9 +221,12 @@
     <section id="gallery">
         <h2>Gallery</h2>
         <div class="gallery">
-            <div class="card"><img src="https://via.placeholder.com/250x150" alt="Classroom" onclick="openLightbox(this.src)"></div>
-            <div class="card"><img src="https://via.placeholder.com/250x150" alt="Repairing Work" onclick="openLightbox(this.src)"></div>
-            <div class="card"><img src="https://via.placeholder.com/250x150" alt="Students" onclick="openLightbox(this.src)"></div>
+            <div class="card"><img src="https://via.placeholder.com/250x150" alt="Classroom"
+                    onclick="openLightbox(this.src)"></div>
+            <div class="card"><img src="https://via.placeholder.com/250x150" alt="Repairing Work"
+                    onclick="openLightbox(this.src)"></div>
+            <div class="card"><img src="https://via.placeholder.com/250x150" alt="Students"
+                    onclick="openLightbox(this.src)"></div>
         </div>
     </section>
 
