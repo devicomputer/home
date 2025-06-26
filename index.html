@@ -14,6 +14,11 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&display=swap" rel="stylesheet">
     <style>
+        * {
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
         body {
             font-family: 'DM Serif Text', serif;
             margin: 0;
@@ -25,33 +30,47 @@
         header {
             background: linear-gradient(135deg, #1a5276, #2980b9);
             color: white;
-            padding: 40px 20px;
+            padding: 60px 20px;
             text-align: center;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
             position: relative;
+            overflow: hidden;
+        }
+
+        header::before {
+            content: '';
+            background: url('logo.webp') no-repeat center;
+            background-size: 200px;
+            opacity: 0.1;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+        }
+
+        header h1,
+        header p {
+            position: relative;
+            z-index: 1;
         }
 
         header img {
             width: 100px;
             height: auto;
             margin-bottom: 10px;
-        }
-
-        header h1 {
-            font-size: 2.8em;
-            margin: 0 0 10px;
-            font-weight: bold;
-        }
-
-        header p {
-            font-size: 1.2em;
-            margin: 0;
+            position: relative;
+            z-index: 1;
         }
 
         nav {
             display: flex;
             justify-content: center;
             background: #154360;
+            position: sticky;
+            top: 0;
+            z-index: 10;
         }
 
         nav a {
@@ -76,56 +95,73 @@
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 20px;
+            animation: fadeIn 1s ease-in;
         }
 
         .card {
             background: white;
             padding: 20px;
             border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            transition: transform 0.2s;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
         }
 
         .card:hover {
-            transform: translateY(-5px);
+            transform: translateY(-8px);
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
         }
 
-        form {
-            background: white;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            max-width: 500px;
-            margin: auto;
-        }
-
-        form input,
-        form textarea {
-            width: 100%;
-            padding: 10px;
-            margin-bottom: 10px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-        }
-
-        form button {
-            background: #154360;
-            color: white;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 5px;
+        .gallery img {
             cursor: pointer;
         }
 
-        form button:hover {
-            background: #1a5276;
+        .lightbox {
+            display: none;
+            position: fixed;
+            z-index: 999;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            justify-content: center;
+            align-items: center;
         }
 
-        footer {
-            background: #154360;
-            color: white;
+        .lightbox img {
+            max-width: 80%;
+            max-height: 80%;
+        }
+
+        .testimonial-slider {
+            max-width: 600px;
+            margin: auto;
             text-align: center;
-            padding: 10px;
+            padding: 30px;
+            background: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .testimonial-slider p {
+            font-style: italic;
+        }
+
+        .testimonial-slider span {
+            display: block;
+            margin-top: 10px;
+            font-weight: bold;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
 
         .whatsapp-button {
@@ -133,22 +169,26 @@
             bottom: 20px;
             right: 20px;
             background-color: #25D366;
-            color: white;
             border-radius: 50%;
             width: 60px;
             height: 60px;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 30px;
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
-            text-decoration: none;
             z-index: 1000;
         }
 
         .whatsapp-button img {
             width: 35px;
             height: 35px;
+        }
+
+        footer {
+            background: #154360;
+            color: white;
+            text-align: center;
+            padding: 10px;
         }
     </style>
 </head>
@@ -164,6 +204,7 @@
         <a href="#services">Services</a>
         <a href="#courses">Courses</a>
         <a href="#gallery">Gallery</a>
+        <a href="#testimonials">Testimonials</a>
         <a href="#contact">Contact</a>
     </nav>
 
@@ -191,27 +232,31 @@
     <section id="gallery">
         <h2>Gallery</h2>
         <div class="gallery">
-            <div class="card"><img src="https://via.placeholder.com/250x150" alt="Classroom"
-                    style="width:100%; border-radius:8px;"></div>
-            <div class="card"><img src="https://via.placeholder.com/250x150" alt="Repairing Work"
-                    style="width:100%; border-radius:8px;"></div>
-            <div class="card"><img src="https://via.placeholder.com/250x150" alt="Students"
-                    style="width:100%; border-radius:8px;"></div>
+            <div class="card"><img src="https://via.placeholder.com/250x150" alt="Classroom" onclick="openLightbox(this.src)"></div>
+            <div class="card"><img src="https://via.placeholder.com/250x150" alt="Repairing Work" onclick="openLightbox(this.src)"></div>
+            <div class="card"><img src="https://via.placeholder.com/250x150" alt="Students" onclick="openLightbox(this.src)"></div>
         </div>
     </section>
 
-    <div style="margin-top: 30px; text-align: center;">
-        <br>
-        <a href="https://www.google.com/maps/dir//Borsi+Chowk,+road,+Hanoda,+Durg,+Chhattisgarh+491001/@21.1579636,81.2203436,12z/data=!4m8!4m7!1m0!1m5!1m1!1s0x3a293d003a2a6971:0x5afbef37bb923db6!2m2!1d81.3027453!2d21.1579835"
-            target="_blank"
+    <div class="lightbox" onclick="closeLightbox()">
+        <img id="lightbox-img" src="" alt="Preview">
+    </div>
+
+    <section id="testimonials">
+        <h2 style="text-align: center;">What Our Students Say</h2>
+        <div class="testimonial-slider">
+            <p id="testimonial-text">Great experience and professional teaching!</p>
+            <span id="testimonial-author">- Ramesh Kumar</span>
+        </div>
+    </section>
+
+    <section id="contact" style="text-align: center; padding: 20px;">
+        <a href="https://www.google.com/maps/dir//Borsi+Chowk,+road,+Hanoda,+Durg,+Chhattisgarh+491001" target="_blank"
             style="display: inline-block; margin-top: 15px; padding: 10px 20px; background-color: #2980b9; color: white; text-decoration: none; border-radius: 5px;">
             Get Directions
         </a>
-    </div>
-
-    <section id="contact" style="text-align: center; padding: 20px;">
         <p><strong>Address:</strong> Borsi Chowk, Road, Hanoda, Durg, Chhattisgarh 491001</p>
-        <p><strong>Phone:</strong> +919301284903</p>
+        <p><strong>Phone:</strong> +91 9301284903</p>
         <p><strong>Email:</strong> devicomputer@gmail.com</p>
     </section>
 
@@ -222,6 +267,32 @@
     <footer>
         <p>&copy; 2025 Devi Computer & Education Center | All Rights Reserved</p>
     </footer>
+
+    <script>
+        // Lightbox functionality
+        function openLightbox(src) {
+            document.getElementById("lightbox-img").src = src;
+            document.querySelector(".lightbox").style.display = "flex";
+        }
+
+        function closeLightbox() {
+            document.querySelector(".lightbox").style.display = "none";
+        }
+
+        // Testimonial Slider
+        const testimonials = [
+            { text: "Great experience and professional teaching!", author: "- Ramesh Kumar" },
+            { text: "Best computer classes in the area.", author: "- Sunita Verma" },
+            { text: "Affordable and high-quality service.", author: "- Ankit Patel" }
+        ];
+
+        let index = 0;
+        setInterval(() => {
+            index = (index + 1) % testimonials.length;
+            document.getElementById("testimonial-text").textContent = testimonials[index].text;
+            document.getElementById("testimonial-author").textContent = testimonials[index].author;
+        }, 4000);
+    </script>
 </body>
 
 </html>
