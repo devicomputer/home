@@ -14,10 +14,7 @@ body {
 }
 
 header {
-   background: url('header-bg.jpeg');
-
-
-  color: white;
+  color: #ffffff;
   padding: 30px 20px;
   text-align: center;
 }
@@ -28,13 +25,13 @@ header img {
 }
 
 nav {
-   background: url('header-bg.jpeg');
+  background-color: #ffffff;
 }
 
 .nav-toggle {
   display: none;
   padding: 10px;
-  color: white;
+  color: #444343;
   font-size: 24px;
   cursor: pointer;
 }
@@ -49,14 +46,15 @@ nav {
 }
 
 .nav-menu li a {
-  color: white;
+  color: rgb(0, 0, 0);
   padding: 14px 20px;
   display: block;
   text-decoration: none;
 }
 
 .nav-menu li a:hover {
-  background-color: #444343;
+  background: #2A7B9B;
+background: linear-gradient(145deg,rgba(94, 187, 230, 1) 0%, rgba(62, 136, 171, 1) 50%, rgba(5, 94, 136, 1) 100%);
   border-radius: 30px;
 }
 
@@ -89,7 +87,8 @@ section {
   display: inline-block;
   margin-top: 15px;
   padding: 10px 20px;
-  background-color: #444343;
+  background: #2A7B9B;
+background: linear-gradient(145deg,rgba(94, 187, 230, 1) 0%, rgba(62, 136, 171, 1) 50%, rgba(5, 94, 136, 1) 100%);
   color: white;
   text-decoration: none;
   border-radius: 5px;
