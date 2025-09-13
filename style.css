@@ -115,7 +115,7 @@
             display: inline-block;
             align-items: center;
             height: 100%;
-            animation: scroll 20s linear infinite;
+            animation: scroll 30s linear infinite;
             white-space: nowrap;
         }
 
@@ -709,4 +709,5 @@
             }
         }
         
+
 
