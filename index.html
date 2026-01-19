@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Devi Computer | Durg's No.1 Tech Hub</title>
+    
+    <link rel="icon" type="image/webp" href="logo.webp">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="preloader">
+        <div class="loader-content">
+            <div class="loader-logo">Devi Computer</div>
+            <div class="spinner"></div>
+        </div>
+    </div>
+
+    <div class="modal-overlay" id="offerModal">
+        <div class="modal-box">
+            <span class="close-modal" onclick="closeModal()">&times;</span>
+            <div class="modal-icon">🎁</div>
+            <h2>Special Offer!</h2>
+            <p>Every <strong>Sunday</strong> is Free Diagnosis Day. Bring your laptop/PC and get it checked for ₹0.</p>
+            <a href="https://wa.me/919301284903?text=Hi,%20I%20want%20to%20book%20Free%20Sunday%20Checkup" class="btn-glow" style="width:100%; justify-content:center;">Book Slot</a>
+        </div>
+    </div>
+
+    <div class="ambient-glow purple"></div>
+    <div class="ambient-glow blue"></div>
+
+    <nav class="glass-nav" id="navbar">
+        <div class="nav-content">
+            <a href="#" class="brand">Devi <span class="dot">Computer</span></a>
+            <div class="nav-items desktop-only">
+                <a href="#home">Home</a>
+                <a href="#services">Services</a>
+                <a href="#reviews">Reviews</a>
+                <a href="#faq">FAQ</a>
+            </div>
+            <div class="nav-right" style="display:flex; align-items:center;">
+                <a href="#contact" class="action-btn">Book Now</a>
+                <button class="mobile-toggle" onclick="toggleMobileMenu()"><i class="fas fa-bars"></i></button>
+            </div>
+        </div>
+        <div class="mobile-menu">
+            <a href="#home" onclick="toggleMobileMenu()">Home</a>
+            <a href="#services" onclick="toggleMobileMenu()">Services</a>
+            <a href="#reviews" onclick="toggleMobileMenu()">Reviews</a>
+            <a href="#faq" onclick="toggleMobileMenu()">FAQ</a>
+            <a href="#contact" onclick="toggleMobileMenu()" class="highlight-link">Book Now -></a>
+        </div>
+    </nav>
+
+    <header id="home" class="hero">
+        <div class="container">
+            <div class="hero-text-center reveal active">
+                <span class="pill-badge">⚡ Professional Tech Services in Durg</span>
+                <h1>We Fix. We Teach.<br><span class="gradient-text">We Upgrade.</span></h1>
+                <p>Expert Laptop Repair, Printer Service, CCTV Installation & Computer Education.</p>
+                <div class="btn-wrapper">
+                    <a href="https://wa.me/919301284903" class="btn-glow"><i class="fab fa-whatsapp"></i> Chat Now</a>
+                    <a href="tel:+919301284903" class="btn-glass"><i class="fas fa-phone" style="transform: rotate(0deg);"></i> Call Us</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section id="services" class="section">
+        <div class="container">
+            <div class="section-header reveal">
+                <h2>Our Services</h2>
+                <p style="color:var(--text-gray); margin-top:10px;">Click any service to book instantly</p>
+            </div>
+            <div class="cards-grid">
+                <div class="glass-card reveal delay-2" onclick="selectService('Desktop & Gaming PC')">
+                    <div class="icon-box"><i class="fas fa-gamepad"></i></div>
+                    <h3>Desktop & Gaming PC</h3>
+                    <p>Custom gaming PC builds, desktop hardware upgrades, and performance tuning.</p>
+                </div>
+                
+                <div class="glass-card reveal delay-1" onclick="selectService('Laptop Repair')">
+                    <div class="icon-box"><i class="fas fa-microchip"></i></div>
+                    <h3>Laptop Repair</h3>
+                    <p>Chip-level repair for dead laptops, broken screens, and slow performance.</p>
+                </div>
+                  <div class="glass-card reveal delay-2" onclick="selectService('CCTV Security')">
+                    <div class="icon-box"><i class="fas fa-shield-alt"></i></div>
+                    <h3>CCTV Security</h3>
+                    <p>HD Camera setup with mobile view for home & office.</p>
+                </div>
+                <div class="glass-card reveal delay-2" onclick="selectService('Printer Hub')">
+                    <div class="icon-box"><i class="fas fa-print"></i></div>
+                    <h3>Printer Hub</h3>
+                    <p>Repair & Refilling for HP, Epson, Canon printers.</p>
+                </div>
+              
+                <div class="glass-card reveal delay-1" onclick="selectService('Data Recovery')">
+                    <div class="icon-box"><i class="fas fa-database"></i></div>
+                    <h3>Data Recovery</h3>
+                    <p>Secure recovery of lost photos, documents & files from damaged drives.</p>
+                </div>
+                <div class="glass-card reveal delay-2" onclick="selectService('Software & OS')">
+                    <div class="icon-box"><i class="fab fa-windows"></i></div>
+                    <h3>Software & OS</h3>
+                    <p>Windows installation, virus removal & essential software setup.</p>
+                </div>
+                <div class="glass-card reveal delay-2" onclick="selectService('Networking')">
+                    <div class="icon-box"><i class="fas fa-wifi"></i></div>
+                    <h3>Networking</h3>
+                    <p>Office networking, router configuration & Wi-Fi range extension.</p>
+                </div>
+                <div class="glass-card reveal delay-1" onclick="selectService('System Upgrades')">
+                    <div class="icon-box"><i class="fas fa-rocket"></i></div>
+                    <h3>System Upgrades</h3>
+                    <p>SSD & RAM upgrades to boost your old computer's speed by 10x.</p>
+                </div>
+                <div class="glass-card reveal delay-2" onclick="selectService('AMC Services')">
+                    <div class="icon-box"><i class="fas fa-file-contract"></i></div>
+                    <h3>AMC Services</h3>
+                    <p>Annual maintenance contracts for businesses to ensure zero downtime.</p>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+    <section id="reviews" class="section">
+        <div class="container">
+            <div class="section-header reveal">
+                <h2>Customer Love</h2>
+            </div>
+            
+            <div class="slider-container reveal delay-1">
+                <div class="slider-track" id="sliderTrack">
+                    <div class="review-slide">
+                        <a href="https://g.page/r/CbY9krs37_taEBM/review" target="_blank" class="review-card">
+                            <div class="stars">★★★★★</div>
+                            <p class="review-text">"Devi Computer gives excellent service. Low price and Devi sir's behavior is very good. Solved my problem easily!"</p>
+                            <div class="client-name">Ravi Deshmukh</div>
+                            <div class="client-loc">Durg, Chhattisgarh</div>
+                        </a>
+                    </div>
+                    <div class="review-slide">
+                        <a href="https://g.page/r/CbY9krs37_taEBM/review" target="_blank" class="review-card">
+                            <div class="stars">★★★★★</div>
+                            <p class="review-text">"Thanks for your excellent services, You solved my software related problem from your office without coming to my home...."</p>
+                            <div class="client-name">Manish Sinha</div>
+                            <div class="client-loc">Raipur, Chhattisgarh</div>
+                        </a>
+                    </div>
+                    <div class="review-slide">
+                        <a href="https://g.page/r/CbY9krs37_taEBM/review" target="_blank" class="review-card">
+                            <div class="stars">★★★★★</div>
+                            <p class="review-text">"I had a great experience at this computer shop. The staff were friendly, knowledgeable, and took time to explain..."</p>
+                            <div class="client-name">Heena Sinha</div>
+                            <div class="client-loc">Durg, Chhattisgarh</div>
+                        </a>
+                    </div>
+                    <div class="review-slide">
+                        <a href="https://g.page/r/CbY9krs37_taEBM/review" target="_blank" class="review-card">
+                            <div class="stars">★★★★★</div>
+                            <p class="review-text">"I had an amazing experience at Devi Computer! They have the best collection of laptops, gaming PCs, and accessories at... "</p>
+                            <div class="client-name">Prachi Tamrakar</div>
+                            <div class="client-loc">Durg, Chhattisgarh</div>
+                        </a>
+                    </div>
+                    <div class="review-slide">
+                        <a href="https://g.page/r/CbY9krs37_taEBM/review" target="_blank" class="review-card">
+                            <div class="stars">★★★★★</div>
+                            <p class="review-text">"हिंदी फॉन्ट (श/ष –) से संबंधित गंभीर समस्या थी, जो काफी समय से परेशान थी। इस कंप्यूटर सेंटर ने सही तरीके से समस्या को... "</p>
+                            <div class="client-name">Ms. Sandhya swarnkar</div>
+                            <div class="client-loc">Durg, Chhattisgarh</div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="faq" class="section">
+        <div class="container" style="max-width: 800px;">
+            <div class="section-header reveal">
+                <h2>Frequently Asked Questions</h2>
+            </div>
+            <div class="faq-item reveal">
+                <div class="faq-question" onclick="toggleFaq(this)">How long does laptop repair take? <span>+</span></div>
+                <div class="faq-answer">Usually, minor repairs are done within 24 hours. Chip-level work might take 2-3 days.</div>
+            </div>
+            <div class="faq-item reveal">
+                <div class="faq-question" onclick="toggleFaq(this)">Do you check laptops for free? <span>+</span></div>
+                <div class="faq-answer">Yes! Every Sunday we offer FREE Diagnosis and Checking service. No charges for checking.</div>
+            </div>
+            <div class="faq-item reveal">
+                <div class="faq-question" onclick="toggleFaq(this)">Do you provide home service? <span>+</span></div>
+                <div class="faq-answer">Yes, we provide home service for CCTV and Desktop setup in Durg area.</div>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contact" class="reveal">
+        <div class="container footer-grid">
+            <div class="footer-info">
+                <h2>Devi Computer</h2>
+                <p>Shop 03, Laxmi Empire, Borsi Hanoda Road, Durg</p>
+                <div class="socials">
+                    <a href="https://www.instagram.com/devicomputerdurg?igsh=MW5wZmlzaHlid3o4eg==" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.facebook.com/p/Devi-Computer-and-Education-Centre-61579284132546/" target="_blank" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                </div>
+            </div>
+            <div class="footer-form">
+                <h3>Quick Enquiry</h3>
+                <form onsubmit="handleWA(event)">
+                    <input type="text" name="name" placeholder="Your Name" required>
+                    <input type="tel" name="phone" placeholder="Phone Number" required>
+                    
+                    <select name="service" id="serviceSelect" required>
+                        <option value="" disabled selected>Select Service...</option>
+                        <option value="Laptop Repair">Laptop Repair</option>
+                        <option value="Printer Hub">Printer Hub</option>
+                        <option value="CCTV Security">CCTV Security</option>
+                        <option value="Data Recovery">Data Recovery</option>
+                        <option value="Software & OS">Software & OS</option>
+                        <option value="Networking">Networking</option>
+                        <option value="System Upgrades">System Upgrades</option>
+                        <option value="AMC Services">AMC Services</option>
+                        <option value="Desktop & Gaming PC">Desktop & Gaming PC</option>
+                        <option value="Course Inquiry">Computer Course</option>
+                        <option value="Other">Other Inquiry</option>
+                    </select>
+
+                    <button type="submit">Send Message</button>
+                </form>
+            </div>
+        </div>
+        <div class="copyright">© 2026 Devi Computer.</div>
+    </footer>
+
+    <script>
+        // 1. Loader & Popup
+        function removeLoader() {
+            const loader = document.getElementById('preloader');
+            if (loader && loader.style.display !== 'none') {
+                loader.style.opacity = '0';
+                setTimeout(() => {
+                    loader.style.display = 'none';
+                    setTimeout(() => {
+                        const modal = document.getElementById('offerModal');
+                        if(modal) modal.style.display = 'flex';
+                    }, 2000);
+                }, 500);
+            }
+        }
+        window.addEventListener('load', removeLoader);
+        setTimeout(removeLoader, 3000);
+
+        // 2. Popup Close
+        function closeModal() {
+            document.getElementById('offerModal').style.display = 'none';
+        }
+
+        // 3. FAQ Toggle
+        function toggleFaq(element) {
+            element.parentElement.classList.toggle('active');
+            const span = element.querySelector('span');
+            span.innerText = span.innerText === '+' ? '-' : '+';
+        }
+
+        // 4. Mobile Menu
+        function toggleMobileMenu() {
+            document.getElementById('navbar').classList.toggle('expanded');
+        }
+
+        // 5. WhatsApp Form Logic
+        function handleWA(e) {
+            e.preventDefault();
+            const name = e.target.name.value;
+            const phone = e.target.phone.value;
+            const service = e.target.service.value;
+            
+            const text = `Hi Devi Computer, my name is ${name}.%0A%0AMy Number: ${phone}%0AI am interested in: *${service}*`;
+            
+            window.open(`https://wa.me/919301284903?text=${text}`, '_blank');
+        }
+
+        // 6. Select Service & Scroll
+        function selectService(serviceName) {
+            const dropdown = document.getElementById('serviceSelect');
+            if(dropdown) {
+                dropdown.value = serviceName;
+            }
+            document.getElementById('contact').scrollIntoView({behavior: 'smooth'});
+        }
+
+        // 7. INFINITE LOOP SLIDER LOGIC
+        const track = document.getElementById('sliderTrack');
+        const slides = document.querySelectorAll('.review-slide');
+        const slideCount = slides.length;
+
+        const clone = slides[0].cloneNode(true);
+        track.appendChild(clone);
+
+        let index = 0;
+        const slideWidth = 100;
+        
+        setInterval(() => {
+            index++;
+            track.style.transition = 'transform 0.5s ease-in-out';
+            track.style.transform = `translateX(-${index * slideWidth}%)`;
+
+            if (index === slideCount) {
+                setTimeout(() => {
+                    track.style.transition = 'none';
+                    index = 0;
+                    track.style.transform = `translateX(0)`;
+                }, 500);
+            }
+        }, 3500);
+
+        // 8. Scroll Reveal
+        function reveal() {
+            var reveals = document.querySelectorAll('.reveal');
+            for (var i = 0; i < reveals.length; i++) {
+                var windowHeight = window.innerHeight;
+                var elementTop = reveals[i].getBoundingClientRect().top;
+                if (elementTop < windowHeight - 50) {
+                    reveals[i].classList.add('active');
+                }
+            }
+        }
+        window.addEventListener('scroll', reveal);
+        reveal();
+    </script>
+</body>
+</html>
