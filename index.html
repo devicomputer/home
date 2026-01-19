@@ -67,6 +67,7 @@
                 <p>Expert Laptop Repair, Printer Service, CCTV Installation & Computer Education.</p>
                 <div class="btn-wrapper">
                     <a href="https://wa.me/919301284903" class="btn-glow"><i class="fab fa-whatsapp"></i> Chat Now</a>
+                    
                     <a href="tel:+919301284903" class="btn-glass"><i class="fas fa-phone" style="transform: rotate(0deg);"></i> Call Us</a>
                 </div>
             </div>
@@ -245,7 +246,7 @@
     </footer>
 
     <script>
-        // 1. Loader & Popup
+        // 1. Loader Logic
         function removeLoader() {
             const loader = document.getElementById('preloader');
             if (loader && loader.style.display !== 'none') {
@@ -267,11 +268,19 @@
             document.getElementById('offerModal').style.display = 'none';
         }
 
-        // 3. FAQ Toggle
+        // 3. FAQ Logic (Fixed Conflict)
         function toggleFaq(element) {
-            element.parentElement.classList.toggle('active');
+            const parent = element.parentElement;
+            parent.classList.toggle('faq-active');
+            
             const span = element.querySelector('span');
-            span.innerText = span.innerText === '+' ? '-' : '+';
+            if (span) {
+                if (parent.classList.contains('faq-active')) {
+                    span.innerText = '+'; 
+                } else {
+                    span.innerText = '+';
+                }
+            }
         }
 
         // 4. Mobile Menu
@@ -300,7 +309,7 @@
             document.getElementById('contact').scrollIntoView({behavior: 'smooth'});
         }
 
-        // 7. INFINITE LOOP SLIDER LOGIC
+        // 7. Infinite Loop Slider
         const track = document.getElementById('sliderTrack');
         const slides = document.querySelectorAll('.review-slide');
         const slideCount = slides.length;
