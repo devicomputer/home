@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- SEO Optimized Title & Meta Description -->
+    <title>Professional Data Recovery Services in Durg | Devi Computer</title>
+    <meta name="description" content="Expert data recovery in Durg, Chhattisgarh. We recover deleted, corrupted, or formatted data from Hard Drives (HDD), SSDs, Pen Drives, and SD Cards.">
+    <meta name="keywords" content="Data Recovery Durg, Hard Disk Recovery Borsi Road, Deleted file recovery, Pen drive repair, Corrupted SSD recovery">
+
+    <link rel="icon" type="image/webp" href="logo.webp">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Link to existing CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="light-mode">
+
+    <!-- NAVBAR -->
+    <nav class="glass-nav" id="navbar">
+        <div class="nav-content">
+            <a href="index.html" class="brand">Devi <span class="dot">Computer</span></a>
+            <div class="nav-items desktop-only">
+                <a href="index.html#home">Home</a>
+                <a href="index.html#services">All Services</a>
+                <a href="#recovery-services">Recovery Services</a>
+            </div>
+            <div class="nav-right" style="display:flex; align-items:center;">
+                <a href="#contact" class="action-btn">Get Help Now</a>
+                <button class="mobile-toggle" onclick="toggleMobileMenu()"><i class="fas fa-bars"></i></button>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div class="mobile-menu">
+            <a href="index.html" onclick="toggleMobileMenu()">Home</a>
+            <a href="index.html#services" onclick="toggleMobileMenu()">All Services</a>
+            <a href="#contact" onclick="toggleMobileMenu()" class="highlight-link">Get Help Now -></a>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <header class="hero" style="min-height: 70vh;">
+        <div class="container">
+            <div class="hero-text-center reveal active">
+                <span class="pill-badge">🔒 Secure & 100% Confidential</span>
+                <h1>Professional <span class="gradient-text">Data Recovery</span></h1>
+                <p>Lost your important files? Don't panic. We successfully recover deleted, formatted, or corrupted data from all types of storage devices.</p>
+                <div class="btn-wrapper">
+                    <a href="https://wa.me/919301284903?text=Hi,%20I%20have%20lost%20my%20data%20and%20need%20recovery%20help" class="btn-glow"><i class="fab fa-whatsapp"></i> Chat Now</a>
+                    <a href="tel:+919301284903" class="btn-glass"><i class="fas fa-phone phone-rotate"></i> Call Us</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- DATA RECOVERY SERVICES GRID -->
+    <section id="recovery-services" class="section">
+        <div class="container">
+            <div class="section-header reveal">
+                <h2>What We Recover</h2>
+                <p style="color:var(--text-gray); margin-top:10px;">High success rate with advanced recovery tools and software.</p>
+            </div>
+            <div class="cards-grid">
+                <div class="glass-card reveal delay-1">
+                    <div class="icon-box"><i class="fas fa-hdd"></i></div>
+                    <h3>Hard Drive (HDD) Recovery</h3>
+                    <p>Recovery from dead, clicking, formatted, or logically crashed internal and external Hard Disks.</p>
+                </div>
+                <div class="glass-card reveal delay-2">
+                    <div class="icon-box"><i class="fas fa-microchip"></i></div>
+                    <h3>SSD & NVMe Recovery</h3>
+                    <p>Expert retrieval of files from unrecognized, corrupted, or formatted Solid State Drives.</p>
+                </div>
+                <div class="glass-card reveal delay-1">
+                    <div class="icon-box"><i class="fas fa-sd-card"></i></div>
+                    <h3>Pen Drive & SD Card</h3>
+                    <p>Get your photos and documents back from broken, RAW format, or accidentally deleted USB drives and memory cards.</p>
+                </div>
+                <div class="glass-card reveal delay-2">
+                    <div class="icon-box"><i class="fas fa-virus-slash"></i></div>
+                    <h3>Virus & OS Crash Rescue</h3>
+                    <p>Data extraction from laptops that won't turn on, Windows boot failures, or virus/malware attacks.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer id="contact" class="reveal" style="margin-top: 50px;">
+        <div class="container footer-grid">
+            <div class="footer-info">
+                <h2>Devi Computer</h2>
+                <p>Shop 03, Laxmi Empire, Borsi Hanoda Road, Durg</p>
+                <div class="socials">
+                    <a href="https://www.instagram.com/devicomputerdurg?igsh=MW5wZmlzaHlid3o4eg==" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.facebook.com/p/Devi-Computer-and-Education-Centre-61579284132546/" target="_blank" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                </div>
+            </div>
+            <div class="footer-form">
+                <h3>Request Data Recovery</h3>
+                <form onsubmit="handleWA(event)">
+                    <input type="text" name="name" placeholder="Your Name" required>
+                    <input type="tel" name="phone" placeholder="Phone Number" required>
+                    <select name="service" required>
+                        <option value="Hard Disk Recovery" selected>Hard Disk (HDD/SSD) Recovery</option>
+                        <option value="Pen Drive / SD Card">Pen Drive / SD Card Recovery</option>
+                        <option value="Laptop Dead Data Rescue">Dead Laptop Data Rescue</option>
+                    </select>
+                    <button type="submit">Send Message</button>
+                </form>
+            </div>
+        </div>
+        <div class="copyright">© 2026 Devi Computer.</div>
+    </footer>
+
+    <!-- FLOATING BUTTONS -->
+    <button id="themeToggleBtn" onclick="toggleTheme()" aria-label="Toggle Theme">
+        <i class="fas fa-moon"></i>
+    </button>
+    <a href="https://wa.me/919301284903" class="float-wa" target="_blank" aria-label="Chat on WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- SCRIPTS -->
+    <script>
+        function toggleMobileMenu() {
+            document.getElementById('navbar').classList.toggle('expanded');
+        }
+
+        function handleWA(e) {
+            e.preventDefault();
+            const name = e.target.name.value;
+            const phone = e.target.phone.value;
+            const service = e.target.service.value;
+            const text = `Hi Devi Computer, my name is ${name}.%0A%0AMy Number: ${phone}%0AI need help with: *${service}*`;
+            window.open(`https://wa.me/919301284903?text=${text}`, '_blank');
+        }
+
+        function toggleTheme() {
+            const body = document.body;
+            const themeBtn = document.getElementById('themeToggleBtn');
+            const icon = themeBtn.querySelector('i');
+            
+            body.classList.toggle('light-mode');
+            
+            if(body.classList.contains('light-mode')) {
+                icon.classList.remove('fa-sun');
+                icon.classList.add('fa-moon');
+            } else {
+                icon.classList.remove('fa-moon');
+                icon.classList.add('fa-sun');
+            }
+        }
+
+        function reveal() {
+            var reveals = document.querySelectorAll('.reveal');
+            for (var i = 0; i < reveals.length; i++) {
+                var windowHeight = window.innerHeight;
+                var elementTop = reveals[i].getBoundingClientRect().top;
+                if (elementTop < windowHeight - 50) {
+                    reveals[i].classList.add('active');
+                }
+            }
+        }
+        window.addEventListener('scroll', reveal);
+        reveal();
+    </script>
+</body>
+</html>

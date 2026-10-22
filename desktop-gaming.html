@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- SEO Optimized Title & Meta Description -->
+    <title>Custom Desktop & Gaming PC Build in Durg | Devi Computer</title>
+    <meta name="description" content="Get custom-built Gaming PCs, office desktops, and video editing workstations in Durg. Best prices on processors, graphics cards, and PC upgrades.">
+    <meta name="keywords" content="Gaming PC Build Durg, Custom Desktop PC, Computer Assembling Borsi Road, Graphics Card, PC upgrades, Video Editing PC">
+
+    <link rel="icon" type="image/webp" href="logo.webp">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Link to existing CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="light-mode">
+
+    <!-- NAVBAR -->
+    <nav class="glass-nav" id="navbar">
+        <div class="nav-content">
+            <a href="index.html" class="brand">Devi <span class="dot">Computer</span></a>
+            <div class="nav-items desktop-only">
+                <a href="index.html#home">Home</a>
+                <a href="index.html#services">All Services</a>
+                <a href="#pc-builds">PC Build Options</a>
+            </div>
+            <div class="nav-right" style="display:flex; align-items:center;">
+                <a href="#contact" class="action-btn">Get a Quote</a>
+                <button class="mobile-toggle" onclick="toggleMobileMenu()"><i class="fas fa-bars"></i></button>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div class="mobile-menu">
+            <a href="index.html" onclick="toggleMobileMenu()">Home</a>
+            <a href="index.html#services" onclick="toggleMobileMenu()">All Services</a>
+            <a href="#contact" onclick="toggleMobileMenu()" class="highlight-link">Get a Quote -></a>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <header class="hero" style="min-height: 70vh;">
+        <div class="container">
+            <div class="hero-text-center reveal active">
+                <span class="pill-badge">🎮 Ultimate Performance. Custom Built.</span>
+                <h1>Desktop & <span class="gradient-text">Gaming PC</span></h1>
+                <p>From budget-friendly office setups to high-end RGB gaming and video editing workstations, we build PCs that match your exact needs.</p>
+                <div class="btn-wrapper">
+                    <a href="https://wa.me/919301284903?text=Hi,%20I%20want%20to%20build%20a%20new%20PC" class="btn-glow"><i class="fab fa-whatsapp"></i> Chat Now</a>
+                    <a href="tel:+919301284903" class="btn-glass"><i class="fas fa-phone phone-rotate"></i> Call Us</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- PC BUILD SERVICES GRID -->
+    <section id="pc-builds" class="section">
+        <div class="container">
+            <div class="section-header reveal">
+                <h2>Our PC Build Services</h2>
+                <p style="color:var(--text-gray); margin-top:10px;">Using 100% genuine parts from Intel, AMD, NVIDIA, Corsair & Asus.</p>
+            </div>
+            <div class="cards-grid">
+                <div class="glass-card reveal delay-1">
+                    <div class="icon-box"><i class="fas fa-gamepad"></i></div>
+                    <h3>Custom Gaming PCs</h3>
+                    <p>High FPS gaming setups with dedicated Graphics Cards (GPUs), liquid cooling, and custom RGB cabinets.</p>
+                </div>
+                <div class="glass-card reveal delay-2">
+                    <div class="icon-box"><i class="fas fa-briefcase"></i></div>
+                    <h3>Office & Student Desktops</h3>
+                    <p>Reliable, budget-friendly desktop computers perfect for accounting (Tally), school work, and daily browsing.</p>
+                </div>
+                <div class="glass-card reveal delay-1">
+                    <div class="icon-box"><i class="fas fa-video"></i></div>
+                    <h3>Creator Workstations</h3>
+                    <p>Heavy-duty PCs optimized for 4K video editing, 3D rendering, AutoCAD, and heavy software development.</p>
+                </div>
+                <div class="glass-card reveal delay-2">
+                    <div class="icon-box"><i class="fas fa-memory"></i></div>
+                    <h3>Hardware Upgrades</h3>
+                    <p>Boost your old PC's speed. We upgrade Processors, add NVMe SSDs, increase RAM, and swap Power Supplies.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer id="contact" class="reveal" style="margin-top: 50px;">
+        <div class="container footer-grid">
+            <div class="footer-info">
+                <h2>Devi Computer</h2>
+                <p>Shop 03, Laxmi Empire, Borsi Hanoda Road, Durg</p>
+                <div class="socials">
+                    <a href="https://www.instagram.com/devicomputerdurg?igsh=MW5wZmlzaHlid3o4eg==" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.facebook.com/p/Devi-Computer-and-Education-Centre-61579284132546/" target="_blank" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                </div>
+            </div>
+            <div class="footer-form">
+                <h3>Get a Custom PC Quote</h3>
+                <form onsubmit="handleWA(event)">
+                    <input type="text" name="name" placeholder="Your Name" required>
+                    <input type="tel" name="phone" placeholder="Phone Number" required>
+                    <select name="service" required>
+                        <option value="Gaming PC Build" selected>Gaming PC Build</option>
+                        <option value="Office Desktop">Office / Normal Desktop</option>
+                        <option value="PC Upgrade">Hardware Upgrade</option>
+                    </select>
+                    <button type="submit">Send Message</button>
+                </form>
+            </div>
+        </div>
+        <div class="copyright">© 2026 Devi Computer.</div>
+    </footer>
+
+    <!-- FLOATING BUTTONS -->
+    <button id="themeToggleBtn" onclick="toggleTheme()" aria-label="Toggle Theme">
+        <i class="fas fa-moon"></i>
+    </button>
+    <a href="https://wa.me/919301284903" class="float-wa" target="_blank" aria-label="Chat on WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- SCRIPTS -->
+    <script>
+        function toggleMobileMenu() {
+            document.getElementById('navbar').classList.toggle('expanded');
+        }
+
+        function handleWA(e) {
+            e.preventDefault();
+            const name = e.target.name.value;
+            const phone = e.target.phone.value;
+            const service = e.target.service.value;
+            const text = `Hi Devi Computer, my name is ${name}.%0A%0AMy Number: ${phone}%0AI am interested in getting a quote for: *${service}*`;
+            window.open(`https://wa.me/919301284903?text=${text}`, '_blank');
+        }
+
+        function toggleTheme() {
+            const body = document.body;
+            const themeBtn = document.getElementById('themeToggleBtn');
+            const icon = themeBtn.querySelector('i');
+            
+            body.classList.toggle('light-mode');
+            
+            if(body.classList.contains('light-mode')) {
+                icon.classList.remove('fa-sun');
+                icon.classList.add('fa-moon');
+            } else {
+                icon.classList.remove('fa-moon');
+                icon.classList.add('fa-sun');
+            }
+        }
+
+        function reveal() {
+            var reveals = document.querySelectorAll('.reveal');
+            for (var i = 0; i < reveals.length; i++) {
+                var windowHeight = window.innerHeight;
+                var elementTop = reveals[i].getBoundingClientRect().top;
+                if (elementTop < windowHeight - 50) {
+                    reveals[i].classList.add('active');
+                }
+            }
+        }
+        window.addEventListener('scroll', reveal);
+        reveal();
+    </script>
+</body>
+</html>

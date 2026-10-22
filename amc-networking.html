@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- SEO Optimized Title & Meta Description -->
+    <title>IT AMC & Networking Services in Durg | Devi Computer</title>
+    <meta name="description" content="Annual Maintenance Contracts (AMC) and networking solutions for offices and schools in Durg. LAN setup, Wi-Fi configuration, and complete IT support.">
+    <meta name="keywords" content="IT AMC Durg, Computer AMC Borsi Road, LAN setup Durg, Wi-Fi configuration, Office IT support">
+
+    <link rel="icon" type="image/webp" href="logo.webp">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Link to existing CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="light-mode">
+
+    <!-- NAVBAR -->
+    <nav class="glass-nav" id="navbar">
+        <div class="nav-content">
+            <a href="index.html" class="brand">Devi <span class="dot">Computer</span></a>
+            <div class="nav-items desktop-only">
+                <a href="index.html#home">Home</a>
+                <a href="index.html#services">All Services</a>
+                <a href="#amc-services">AMC & Network</a>
+            </div>
+            <div class="nav-right" style="display:flex; align-items:center;">
+                <a href="#contact" class="action-btn">Get a Quote</a>
+                <button class="mobile-toggle" onclick="toggleMobileMenu()"><i class="fas fa-bars"></i></button>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div class="mobile-menu">
+            <a href="index.html" onclick="toggleMobileMenu()">Home</a>
+            <a href="index.html#services" onclick="toggleMobileMenu()">All Services</a>
+            <a href="#contact" onclick="toggleMobileMenu()" class="highlight-link">Get a Quote -></a>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <header class="hero" style="min-height: 70vh;">
+        <div class="container">
+            <div class="hero-text-center reveal active">
+                <span class="pill-badge">🏢 Corporate & Small Business IT Support</span>
+                <h1>AMC & <span class="gradient-text">Networking</span></h1>
+                <p>Keep your office running smoothly. We provide complete Annual Maintenance Contracts and secure LAN/Wi-Fi networking setups in Durg.</p>
+                <div class="btn-wrapper">
+                    <a href="https://wa.me/919301284903?text=Hi,%20I%20want%20to%20discuss%20IT%20AMC/Networking" class="btn-glow"><i class="fab fa-whatsapp"></i> Chat Now</a>
+                    <a href="tel:+919301284903" class="btn-glass"><i class="fas fa-phone phone-rotate"></i> Call Us</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- AMC SERVICES GRID -->
+    <section id="amc-services" class="section">
+        <div class="container">
+            <div class="section-header reveal">
+                <h2>Our Business Solutions</h2>
+                <p style="color:var(--text-gray); margin-top:10px;">Reliable tech support for schools, hospitals, and offices.</p>
+            </div>
+            <div class="cards-grid">
+                <div class="glass-card reveal delay-1">
+                    <div class="icon-box"><i class="fas fa-handshake"></i></div>
+                    <h3>Annual Maintenance (AMC)</h3>
+                    <p>Year-round priority support and regular checkups for your office PCs and printers to prevent unexpected breakdowns.</p>
+                </div>
+                <div class="glass-card reveal delay-2">
+                    <div class="icon-box"><i class="fas fa-network-wired"></i></div>
+                    <h3>LAN & Cable Setup</h3>
+                    <p>Professional laying of ethernet cables, switch installations, and neat rack management for seamless internet access.</p>
+                </div>
+                <div class="glass-card reveal delay-1">
+                    <div class="icon-box"><i class="fas fa-wifi"></i></div>
+                    <h3>Wi-Fi & Router Config</h3>
+                    <p>Setting up long-range routers, access points, and securing your wireless network from unauthorized users.</p>
+                </div>
+                <div class="glass-card reveal delay-2">
+                    <div class="icon-box"><i class="fas fa-server"></i></div>
+                    <h3>File & Tally Sharing</h3>
+                    <p>Configuring local servers to share printers, Tally ERP data, and important files across multiple computers securely.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer id="contact" class="reveal" style="margin-top: 50px;">
+        <div class="container footer-grid">
+            <div class="footer-info">
+                <h2>Devi Computer</h2>
+                <p>Shop 03, Laxmi Empire, Borsi Hanoda Road, Durg</p>
+                <div class="socials">
+                    <a href="https://www.instagram.com/devicomputerdurg?igsh=MW5wZmlzaHlid3o4eg==" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.facebook.com/p/Devi-Computer-and-Education-Centre-61579284132546/" target="_blank" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                </div>
+            </div>
+            <div class="footer-form">
+                <h3>Request IT Support</h3>
+                <form onsubmit="handleWA(event)">
+                    <input type="text" name="name" placeholder="Your Name / Company" required>
+                    <input type="tel" name="phone" placeholder="Phone Number" required>
+                    <select name="service" required>
+                        <option value="Business AMC Inquiry" selected>Business AMC Inquiry</option>
+                        <option value="LAN / Wi-Fi Setup">LAN / Wi-Fi Networking Setup</option>
+                        <option value="IT Troubleshooting">General IT Troubleshooting</option>
+                    </select>
+                    <button type="submit">Send Message</button>
+                </form>
+            </div>
+        </div>
+        <div class="copyright">© 2026 Devi Computer.</div>
+    </footer>
+
+    <!-- FLOATING BUTTONS -->
+    <button id="themeToggleBtn" onclick="toggleTheme()" aria-label="Toggle Theme">
+        <i class="fas fa-moon"></i>
+    </button>
+    <a href="https://wa.me/919301284903" class="float-wa" target="_blank" aria-label="Chat on WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- SCRIPTS -->
+    <script>
+        function toggleMobileMenu() {
+            document.getElementById('navbar').classList.toggle('expanded');
+        }
+
+        function handleWA(e) {
+            e.preventDefault();
+            const name = e.target.name.value;
+            const phone = e.target.phone.value;
+            const service = e.target.service.value;
+            const text = `Hi Devi Computer, my name is ${name}.%0A%0AMy Number: ${phone}%0AI want to discuss: *${service}*`;
+            window.open(`https://wa.me/919301284903?text=${text}`, '_blank');
+        }
+
+        function toggleTheme() {
+            const body = document.body;
+            const themeBtn = document.getElementById('themeToggleBtn');
+            const icon = themeBtn.querySelector('i');
+            
+            body.classList.toggle('light-mode');
+            
+            if(body.classList.contains('light-mode')) {
+                icon.classList.remove('fa-sun');
+                icon.classList.add('fa-moon');
+            } else {
+                icon.classList.remove('fa-moon');
+                icon.classList.add('fa-sun');
+            }
+        }
+
+        function reveal() {
+            var reveals = document.querySelectorAll('.reveal');
+            for (var i = 0; i < reveals.length; i++) {
+                var windowHeight = window.innerHeight;
+                var elementTop = reveals[i].getBoundingClientRect().top;
+                if (elementTop < windowHeight - 50) {
+                    reveals[i].classList.add('active');
+                }
+            }
+        }
+        window.addEventListener('scroll', reveal);
+        reveal();
+    </script>
+</body>
+</html>

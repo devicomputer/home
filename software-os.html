@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- SEO Optimized Title & Meta Description -->
+    <title>Software & OS Installation in Durg | Devi Computer</title>
+    <meta name="description" content="Get Windows 10/11 installed with genuine activation in Durg. We provide MS Office, Tally, Antivirus, and essential software installations.">
+    <meta name="keywords" content="Windows installation Durg, Antivirus Borsi Road, MS Office setup, Tally ERP installation, Software repair Durg">
+
+    <link rel="icon" type="image/webp" href="logo.webp">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Link to existing CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="light-mode">
+
+    <!-- NAVBAR -->
+    <nav class="glass-nav" id="navbar">
+        <div class="nav-content">
+            <a href="index.html" class="brand">Devi <span class="dot">Computer</span></a>
+            <div class="nav-items desktop-only">
+                <a href="index.html#home">Home</a>
+                <a href="index.html#services">All Services</a>
+                <a href="#software-services">Software Solutions</a>
+            </div>
+            <div class="nav-right" style="display:flex; align-items:center;">
+                <a href="#contact" class="action-btn">Book Now</a>
+                <button class="mobile-toggle" onclick="toggleMobileMenu()"><i class="fas fa-bars"></i></button>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div class="mobile-menu">
+            <a href="index.html" onclick="toggleMobileMenu()">Home</a>
+            <a href="index.html#services" onclick="toggleMobileMenu()">All Services</a>
+            <a href="#contact" onclick="toggleMobileMenu()" class="highlight-link">Book Now -></a>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <header class="hero" style="min-height: 70vh;">
+        <div class="container">
+            <div class="hero-text-center reveal active">
+                <span class="pill-badge">💿 Windows | Office | Tally | Antivirus</span>
+                <h1>Software & <span class="gradient-text">OS Setup</span></h1>
+                <p>Is your PC running slow or facing virus issues? Get a fresh Windows installation, essential software, and premium antivirus protection.</p>
+                <div class="btn-wrapper">
+                    <a href="https://wa.me/919301284903?text=Hi,%20I%20need%20software/OS%20installation" class="btn-glow"><i class="fab fa-whatsapp"></i> Chat Now</a>
+                    <a href="tel:+919301284903" class="btn-glass"><i class="fas fa-phone phone-rotate"></i> Call Us</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- SOFTWARE SERVICES GRID -->
+    <section id="software-services" class="section">
+        <div class="container">
+            <div class="section-header reveal">
+                <h2>What We Provide</h2>
+                <p style="color:var(--text-gray); margin-top:10px;">Safe installation without losing your important files.</p>
+            </div>
+            <div class="cards-grid">
+                <div class="glass-card reveal delay-1">
+                    <div class="icon-box"><i class="fab fa-windows"></i></div>
+                    <h3>OS Installation</h3>
+                    <p>Clean installation of Windows 10, Windows 11, Linux, or macOS with proper drivers and updates.</p>
+                </div>
+                <div class="glass-card reveal delay-2">
+                    <div class="icon-box"><i class="fas fa-file-word"></i></div>
+                    <h3>Essential Software</h3>
+                    <p>Setup for MS Office (Word, Excel, PowerPoint), Tally Prime, Adobe Reader, and daily-use applications.</p>
+                </div>
+                <div class="glass-card reveal delay-1">
+                    <div class="icon-box"><i class="fas fa-shield-alt"></i></div>
+                    <h3>Antivirus & Security</h3>
+                    <p>Original QuickHeal and other premium antivirus installations to protect your PC from malware and ransomware.</p>
+                </div>
+                <div class="glass-card reveal delay-2">
+                    <div class="icon-box"><i class="fas fa-broom"></i></div>
+                    <h3>Formatting & Cleanup</h3>
+                    <p>System formatting with safe data backup, removing junk files, and optimizing background processes for speed.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer id="contact" class="reveal" style="margin-top: 50px;">
+        <div class="container footer-grid">
+            <div class="footer-info">
+                <h2>Devi Computer</h2>
+                <p>Shop 03, Laxmi Empire, Borsi Hanoda Road, Durg</p>
+                <div class="socials">
+                    <a href="https://www.instagram.com/devicomputerdurg?igsh=MW5wZmlzaHlid3o4eg==" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.facebook.com/p/Devi-Computer-and-Education-Centre-61579284132546/" target="_blank" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                </div>
+            </div>
+            <div class="footer-form">
+                <h3>Request Software Service</h3>
+                <form onsubmit="handleWA(event)">
+                    <input type="text" name="name" placeholder="Your Name" required>
+                    <input type="tel" name="phone" placeholder="Phone Number" required>
+                    <select name="service" required>
+                        <option value="Windows Installation" selected>Windows OS Installation</option>
+                        <option value="Software Setup (Office/Tally)">Software Setup (Office/Tally)</option>
+                        <option value="Antivirus / PC Formatting">Antivirus / PC Formatting</option>
+                    </select>
+                    <button type="submit">Send Message</button>
+                </form>
+            </div>
+        </div>
+        <div class="copyright">© 2026 Devi Computer.</div>
+    </footer>
+
+    <!-- FLOATING BUTTONS -->
+    <button id="themeToggleBtn" onclick="toggleTheme()" aria-label="Toggle Theme">
+        <i class="fas fa-moon"></i>
+    </button>
+    <a href="https://wa.me/919301284903" class="float-wa" target="_blank" aria-label="Chat on WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- SCRIPTS -->
+    <script>
+        function toggleMobileMenu() {
+            document.getElementById('navbar').classList.toggle('expanded');
+        }
+
+        function handleWA(e) {
+            e.preventDefault();
+            const name = e.target.name.value;
+            const phone = e.target.phone.value;
+            const service = e.target.service.value;
+            const text = `Hi Devi Computer, my name is ${name}.%0A%0AMy Number: ${phone}%0AI need help with: *${service}*`;
+            window.open(`https://wa.me/919301284903?text=${text}`, '_blank');
+        }
+
+        function toggleTheme() {
+            const body = document.body;
+            const themeBtn = document.getElementById('themeToggleBtn');
+            const icon = themeBtn.querySelector('i');
+            
+            body.classList.toggle('light-mode');
+            
+            if(body.classList.contains('light-mode')) {
+                icon.classList.remove('fa-sun');
+                icon.classList.add('fa-moon');
+            } else {
+                icon.classList.remove('fa-moon');
+                icon.classList.add('fa-sun');
+            }
+        }
+
+        function reveal() {
+            var reveals = document.querySelectorAll('.reveal');
+            for (var i = 0; i < reveals.length; i++) {
+                var windowHeight = window.innerHeight;
+                var elementTop = reveals[i].getBoundingClientRect().top;
+                if (elementTop < windowHeight - 50) {
+                    reveals[i].classList.add('active');
+                }
+            }
+        }
+        window.addEventListener('scroll', reveal);
+        reveal();
+    </script>
+</body>
+</html>
